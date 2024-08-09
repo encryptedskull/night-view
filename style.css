@@ -1,0 +1,181 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(21, 0, 61);
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mountain-range {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  position: relative;
+}
+#mountain1,
+#mountain2,
+#mountain3,
+#mountain4,
+#mountain5,
+#mountain6,
+#mountain7,
+#mountain8 {
+  border-left: 200px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 300px solid rgb(32, 24, 53);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  /* position: fixed; */
+  /* z-index: 10000; */
+}
+#mountain1 {
+  left: -5%;
+}
+#mountain2 {
+  left: 10%;
+}
+#mountain3 {
+  left: 20%;
+}
+#mountain4 {
+  left: 30%;
+}
+#mountain5 {
+  left: 42%;
+}
+#mountain6 {
+  left: 52%;
+}
+#mountain7 {
+  left: 62%;
+}
+#mountain8 {
+  left: 72%;
+}
+.moving_str {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: white;
+  top: 300px;
+  right: -10%;
+  box-shadow: 0px 0px 120px white;
+  animation: move 3s linear 5s infinite;
+}
+.stars {
+  position: relative;
+}
+.star1,
+.star2,
+.star3,
+.star4,
+.star5,
+.star6,
+.star7,
+.star8,
+.star9,
+.star10 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: white;
+  animation: shine 1s linear 1s infinite;
+  /* display: inline; */
+}
+.star1 {
+  top: 120px;
+  left: 30%;
+}
+.star2 {
+  top: 140px;
+  right: 30%;
+}
+.star3 {
+  top: 50px;
+  left: 40%;
+}
+.star4 {
+  left: 20%;
+  top: 350px;
+}
+.star5 {
+  right: 40%;
+  top: 260px;
+}
+.star6 {
+  top: 70px;
+  left: 15%;
+}
+.star7 {
+  top: 70px;
+  right: 45%;
+}
+.star8 {
+  top: 220px;
+  left: 10%;
+}
+.star9 {
+  top: 270px;
+  right: 50%;
+}
+.star10 {
+  top: 90px;
+  right: 20%;
+}
+.moon {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  display: inline;
+  top: 42%;
+  left: 35%;
+  /* transform: translateX(-20px); */
+}
+.chan {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background: rgb(21, 0, 61);
+  position: absolute;
+  display: inline;
+  top: 39%;
+  left: 35%;
+  transform: translateX(20px);
+}
+
+.sun {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background: radial-gradient(#f17022 50%, #fcb100 200%);
+  box-shadow: 0px 0px 70px #ffb60d4f;
+  position: absolute;
+  bottom: 22%;
+  right: 47%;
+}
+
+@keyframes shine {
+  0% {
+    box-shadow: 0px 0px 10px whitesmoke;
+  }
+  100% {
+    box-shadow: 0px 0px 30px whitesmoke;
+  }
+}
+@keyframes move {
+  100% {
+    top: 500px;
+    right: 90%;
+  }
+}
